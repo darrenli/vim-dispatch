@@ -137,7 +137,7 @@ function! dispatch#isolate(...)
   let command += a:000
   let temp = tempname()
   call writefile(command, temp)
-  return 'env -i ' . &shell . ' ' . temp
+  return &shell . ' ' . temp
 endfunction
 
 function! s:set_current_compiler(name)
